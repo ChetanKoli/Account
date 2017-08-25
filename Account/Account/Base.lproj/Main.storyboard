@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="D2e-dU-4Er">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Accounts-->
+        <scene sceneID="bYZ-bU-6aE">
+            <objects>
+                <tableViewController id="bVJ-4Q-2wt" customClass="AccountDetailsTableViewController" customModule="Account" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="284" sectionHeaderHeight="28" sectionFooterHeight="28" id="yyQ-23-4L1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountDetailTableViewCellIdentifier" rowHeight="284" id="8v8-pU-dxc" customClass="AccountDetailTableViewCell" customModule="Account" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="284"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8v8-pU-dxc" id="OQw-gv-2wz">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="loM-IQ-Vsp" userLabel="CartView">
+                                            <rect key="frame" x="16" y="16" width="343" height="252"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="NcH-BH-fXd" userLabel="DetailsStackView">
+                                                    <rect key="frame" x="12" y="12" width="319" height="230"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BD6-Jk-69G" userLabel="AccountNumberStackView">
+                                                            <rect key="frame" x="0.0" y="0.0" width="319" height="21.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;accountNumber&gt;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYB-fF-8Ol">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="KMB-V6-ED6" userLabel="AccountNameStackView">
+                                                            <rect key="frame" x="0.0" y="29.5" width="319" height="42.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIc-pa-BvV">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;accountName&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXx-I4-Gnt">
+                                                                    <rect key="frame" x="0.0" y="21" width="319" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                            <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7rI-Xx-y0n" userLabel="AccountBalanceStackView">
+                                                            <rect key="frame" x="0.0" y="80" width="319" height="42.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDq-Au-j3J">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;accountBalance&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfb-AJ-UmG">
+                                                                    <rect key="frame" x="0.0" y="21.5" width="319" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                            <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Bw-T9-qWX" userLabel="ibanStackView">
+                                                            <rect key="frame" x="0.0" y="130.5" width="319" height="43"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="iban" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mlm-OK-LCF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;ibanNumber&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52P-OO-rag">
+                                                                    <rect key="frame" x="0.0" y="21.5" width="319" height="21.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                            <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UHJ-L3-k65" userLabel="AccounttypeStackView">
+                                                            <rect key="frame" x="0.0" y="181.5" width="319" height="48.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Account Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjV-oG-8v9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="319" height="24"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                                    </variation>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;accountType&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJz-KY-1pn">
+                                                                    <rect key="frame" x="0.0" y="24" width="319" height="24.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                                    </variation>
+                                                                </label>
+                                                            </subviews>
+                                                            <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="BD6-Jk-69G" firstAttribute="leading" secondItem="NcH-BH-fXd" secondAttribute="leading" id="1jz-Yd-10Y"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BD6-Jk-69G" secondAttribute="trailing" id="4ZE-3q-xVB"/>
+                                                        <constraint firstItem="KMB-V6-ED6" firstAttribute="leading" secondItem="NcH-BH-fXd" secondAttribute="leading" id="EVK-RB-3Ng"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UHJ-L3-k65" secondAttribute="trailing" id="JZo-Tf-K5B"/>
+                                                        <constraint firstItem="UHJ-L3-k65" firstAttribute="leading" secondItem="NcH-BH-fXd" secondAttribute="leading" id="Ljq-F8-bai"/>
+                                                        <constraint firstItem="7rI-Xx-y0n" firstAttribute="leading" secondItem="NcH-BH-fXd" secondAttribute="leading" id="SQA-ya-5pc"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4Bw-T9-qWX" secondAttribute="trailing" id="XMu-ru-ipL"/>
+                                                        <constraint firstItem="4Bw-T9-qWX" firstAttribute="leading" secondItem="NcH-BH-fXd" secondAttribute="leading" id="XUX-51-xfz"/>
+                                                        <constraint firstAttribute="trailing" secondItem="KMB-V6-ED6" secondAttribute="trailing" id="XeL-Fo-6o8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="7rI-Xx-y0n" secondAttribute="trailing" id="hiR-g1-UB1"/>
+                                                    </constraints>
+                                                    <variation key="heightClass=regular-widthClass=compact" spacing="8"/>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NcH-BH-fXd" secondAttribute="bottom" constant="2" id="Gi0-dJ-D2D"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NcH-BH-fXd" secondAttribute="trailing" constant="12" id="HTV-ah-0l9">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                </constraint>
+                                                <constraint firstAttribute="width" constant="550" id="LXF-x1-7cn"/>
+                                                <constraint firstItem="NcH-BH-fXd" firstAttribute="leading" secondItem="loM-IQ-Vsp" secondAttribute="leadingMargin" constant="12" id="rey-ob-hxF">
+                                                    <variation key="heightClass=regular-widthClass=compact" constant="4"/>
+                                                </constraint>
+                                                <constraint firstItem="NcH-BH-fXd" firstAttribute="top" secondItem="loM-IQ-Vsp" secondAttribute="topMargin" constant="4" id="vrL-ln-ace"/>
+                                            </constraints>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <exclude reference="LXF-x1-7cn"/>
+                                                </mask>
+                                            </variation>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="loM-IQ-Vsp" firstAttribute="leading" secondItem="OQw-gv-2wz" secondAttribute="leadingMargin" constant="8" id="OjS-2v-LiW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="loM-IQ-Vsp" secondAttribute="bottom" constant="8" id="bJM-Ml-nEG"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="loM-IQ-Vsp" secondAttribute="trailing" constant="8" id="by0-na-tIB"/>
+                                        <constraint firstItem="loM-IQ-Vsp" firstAttribute="centerX" secondItem="OQw-gv-2wz" secondAttribute="centerX" id="fgx-dc-fsV"/>
+                                        <constraint firstItem="loM-IQ-Vsp" firstAttribute="top" secondItem="OQw-gv-2wz" secondAttribute="topMargin" constant="8" id="gfP-bo-X3E"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="OjS-2v-LiW"/>
+                                            <exclude reference="by0-na-tIB"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="constraints">
+                                            <include reference="OjS-2v-LiW"/>
+                                            <include reference="by0-na-tIB"/>
+                                            <exclude reference="fgx-dc-fsV"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="accountBalanceLabel" destination="sfb-AJ-UmG" id="qqb-Qn-jXu"/>
+                                    <outlet property="accountNameLabel" destination="BXx-I4-Gnt" id="kll-Xe-Ffq"/>
+                                    <outlet property="accountNumberLabel" destination="cYB-fF-8Ol" id="KgP-zn-HfI"/>
+                                    <outlet property="accountTypeLabel" destination="lJz-KY-1pn" id="yOX-2d-H89"/>
+                                    <outlet property="ibanNumberLabel" destination="52P-OO-rag" id="Yfu-E8-Mej"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="bVJ-4Q-2wt" id="mYb-L9-XeH"/>
+                            <outlet property="delegate" destination="bVJ-4Q-2wt" id="Tei-VV-hjN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Accounts" id="n5q-NE-78f">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="Mi5-jG-gIO">
+                            <rect key="frame" x="72" y="7" width="231" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="All Accounts"/>
+                                <segment title="Visible Accounts"/>
+                            </segments>
+                            <connections>
+                                <action selector="displayAccountDetails:" destination="bVJ-4Q-2wt" eventType="valueChanged" id="19U-EW-WkF"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="accountDisplaySegment" destination="Mi5-jG-gIO" id="88M-2Y-9An"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="es8-GN-smU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="-46"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gZM-ZM-KLs">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="D2e-dU-4Er" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="K5H-pO-lCM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bVJ-4Q-2wt" kind="relationship" relationship="rootViewController" id="6eh-3v-rmE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mAz-5i-9rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="160" y="-46"/>
+        </scene>
+    </scenes>
+</document>

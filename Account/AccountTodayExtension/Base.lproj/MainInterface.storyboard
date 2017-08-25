@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Account Details Today View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" customClass="AccountDetailsTodayViewController" customModule="AccountTodayExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;statusMessage&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxS-30-QQn">
+                                <rect key="frame" x="91" y="64" width="137.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="2GM-la-WTc">
+                                <rect key="frame" x="16" y="0.0" width="288" height="150"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gnv-K4-Wle">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="29"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="28" id="jog-Lg-rXj"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="All Accounts"/>
+                                            <segment title="Visible Accounts"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="displayAccountDetails:" destination="M4Y-Lb-cyx" eventType="valueChanged" id="mGK-t3-wia"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="38" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4h2-Yg-QjR">
+                                        <rect key="frame" x="0.0" y="28" width="288" height="122"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AccountDetailTodayExtensionTableViewCellIdentifier" rowHeight="56" id="X57-oj-NJG" customClass="AccountDetailsTodayExtensionTableViewCell" customModule="AccountTodayExtension" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="288" height="56"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="X57-oj-NJG" id="S5z-if-NxC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="288" height="56"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="D92-HE-doM" userLabel="DetailsStackView">
+                                                            <rect key="frame" x="8" y="8" width="272" height="39.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;accountName&gt;" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCp-Uj-CXj">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="272" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                    <variation key="widthClass=compact">
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                    </variation>
+                                                                </label>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ftq-Cu-vjI">
+                                                                    <rect key="frame" x="0.0" y="22" width="272" height="17.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;ibanNumber&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLT-9n-5vs">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="121" height="17"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="widthClass=compact">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;accountBalance&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohz-Ph-d1g">
+                                                                            <rect key="frame" x="121" y="0.0" width="151" height="17"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                            <variation key="widthClass=compact">
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                            </variation>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="D92-HE-doM" firstAttribute="leading" secondItem="S5z-if-NxC" secondAttribute="leadingMargin" id="Cud-vN-fmp"/>
+                                                        <constraint firstItem="D92-HE-doM" firstAttribute="top" secondItem="S5z-if-NxC" secondAttribute="topMargin" id="PV8-ra-euo"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="D92-HE-doM" secondAttribute="bottom" id="jBk-Pd-cKu"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="D92-HE-doM" secondAttribute="trailing" id="ogJ-0K-UUM"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="accountBalanceLabel" destination="ohz-Ph-d1g" id="kFB-6I-xJe"/>
+                                                    <outlet property="accountNameLabel" destination="RCp-Uj-CXj" id="0TJ-iC-cg2"/>
+                                                    <outlet property="ibanNumberLabel" destination="yLT-9n-5vs" id="fuf-Cv-L6G"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="M4Y-Lb-cyx" id="GGM-Gm-Ayp"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Gnv-K4-Wle" firstAttribute="leading" secondItem="2GM-la-WTc" secondAttribute="leading" id="1dR-Gy-a9p"/>
+                                    <constraint firstAttribute="bottom" secondItem="4h2-Yg-QjR" secondAttribute="bottom" id="7Wm-6j-Oa9"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gnv-K4-Wle" secondAttribute="trailing" id="GQT-rq-8z2"/>
+                                    <constraint firstItem="4h2-Yg-QjR" firstAttribute="leading" secondItem="2GM-la-WTc" secondAttribute="leading" id="Uza-0E-i5p"/>
+                                    <constraint firstItem="Gnv-K4-Wle" firstAttribute="top" secondItem="2GM-la-WTc" secondAttribute="top" id="Wm2-uW-XNQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="4h2-Yg-QjR" secondAttribute="trailing" id="iEm-8x-Fp3"/>
+                                    <constraint firstItem="4h2-Yg-QjR" firstAttribute="top" secondItem="Gnv-K4-Wle" secondAttribute="bottom" id="tZY-l8-Fhr"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="2GM-la-WTc" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="540-GR-Zf8"/>
+                            <constraint firstItem="TxS-30-QQn" firstAttribute="centerX" secondItem="S3S-Oj-5AN" secondAttribute="centerX" id="W0C-WC-bK9"/>
+                            <constraint firstItem="2GM-la-WTc" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leadingMargin" id="fqU-6t-3wG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2GM-la-WTc" secondAttribute="trailing" id="lqp-Bt-UQt"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="2GM-la-WTc" secondAttribute="bottom" id="vlr-jA-FcA"/>
+                            <constraint firstItem="TxS-30-QQn" firstAttribute="centerY" secondItem="S3S-Oj-5AN" secondAttribute="centerY" id="zyv-Ls-RiZ"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="150"/>
+                    <connections>
+                        <outlet property="accountDetailStackView" destination="2GM-la-WTc" id="CVS-DL-Qzj"/>
+                        <outlet property="accountDisplaySegment" destination="Gnv-K4-Wle" id="Pfo-dz-ap8"/>
+                        <outlet property="statusMessageLabel" destination="TxS-30-QQn" id="zQr-UQ-qyA"/>
+                        <outlet property="tableView" destination="4h2-Yg-QjR" id="eoX-nU-FM6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.59999999999999" y="138.53073463268368"/>
+        </scene>
+    </scenes>
+</document>
